@@ -1,10 +1,16 @@
-# Documentation
+# Session 3
 
-In this notebook, our objective is to create a neural network which can learn from the MNIST Dataset and predict the labels with 99.4% accuracy in less than 20k parameters and in 20 epochs.
+## Part 1
 
-## Network
+s
 
-First, we define out neural netwrok `Net`.
+## Part 2
+
+In [this](https://github.com/SyedMa3/eva8/blob/main/S3/session_3.ipynb) notebook, our objective is to create a neural network which can learn from the MNIST Dataset and predict the labels with `99.4%` accuracy in less than `20k` parameters and in `20` epochs.
+
+### Network
+
+First, we define out neural network `Net`.
 
 The layers for the network are:
 
@@ -21,9 +27,11 @@ AvgPool2d((1,1))
 Linear(32, 10)
 ```
 
-> We use Dropout, ReLU, Batch Normalisation after every convolution layer(except in the last we use only ReLU)
+> We use Dropout, ReLU, Batch Normalisation after every convolution layer(except in the last convolution layer we use only ReLU)
 
-### Summary of our network
+We use log_softmax after the fully connected layer.
+
+#### Summary of our network
 
 Using `torchsummary` we can see the summary of our network
 
@@ -63,9 +71,22 @@ Estimated Total Size (MB): 0.47
 ----------------------------------------------------------------
 ```
 
-As we can see, our parameters are < 20k.
+As we can see, our parameters are **< 20k**.
 
-One should also note that the estimated total size of our network is only 0.47 MB. And we will see that this network predict with very high accuracy. The power of deep learning.
+One should also note that the estimated total size of our network is only **0.47 MB**. And we will see that this network predict with very high accuracy. The power of deep learning.
 
-## Training
+### Training
 
+Using the function `datasets.MNIST()` from `torchvision` we create a train and test dataloader with batch size set as 128.
+
+For training, we use:
+
+Optimiser: SGD with `lr=0.01` and `momentum=0.9`
+
+Loss: `Negative Log Likelihood`
+
+Then after training we can see in the logs, we achieved the accuracy of 99.4%.
+
+### Conclusion
+
+We got **99.4%** accuracy with **18530** parameters in **20** epochs. We can surely do better that too with less parameters but this is what I implemented as part of my learning process.
