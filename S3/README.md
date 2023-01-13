@@ -20,13 +20,13 @@ $
 - Therefore, using chain rule
 
 $$
-d(E_1)/dw_5 = dE_1/da{\_}o_1 * da{\_}o_1/do_1 * do_1/dw_5
+d(E_1)/dw_5 = dE_1/da\_o_1 * da\_o_1/do_1 * do_1/dw_5
 $$
 
 - And on simplifying we get,
 
 $$
-dE/dw_5 = (a{\_}o_1-t_1) * a{\_}o_1 * (1-a{\_}o_1) * a{\_}h_1
+dE/dw_5 = (a\_o_1-t_1) * a\_o_1 * (1-a\_o_1) * a\_h_1
 $$
 
 - Similary for other weights in the output layer.
@@ -38,7 +38,7 @@ We go further back one layer and also using the values calculated till this poin
 We get
 
 $$
-dE/dw_1 = dE/da{\_}h_1 * a{\_}h_1 * (1-a{\_}h_1) *i_1
+dE/dw_1 = dE/da\_h_1 * a\_h_1 * (1-a\_h_1) *i_1
 $$
 
 ### Screenshot
