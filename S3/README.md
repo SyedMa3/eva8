@@ -2,7 +2,48 @@
 
 ## Part 1
 
-s
+For backpropagation, we need to find the values of dE/d(weights) and in the process we may need to calculate intermediate values.
+
+We will break this process in two parts. Since there are two layers and the calculation for weights in the same layer will be similar.
+
+### Output Layer
+
+We consider w5.
+
+- We start with `dE/dw5` which is
+$
+    d(E_1 + E_2)/dw_5
+$
+
+- But only $E_1$ depends on $w_5$
+
+- Therefore, using chain rule
+
+$$
+d(E_1)/dw_5 = dE_1/da{\_}o_1 * da{\_}o_1/do_1 * do_1/dw_5
+$$
+
+- And on simplifying we get,
+
+$$
+dE/dw_5 = (a{\_}o_1-t_1) * a{\_}o_1 * (1-a{\_}o_1) * a{\_}h_1
+$$
+
+- Similary for other weights in the output layer.
+
+### Hidden Layer
+
+We go further back one layer and also using the values calculated till this point.
+
+We get
+
+$$
+dE/dw_1 = dE/da{\_}h_1 * a{\_}h_1 * (1-a{\_}h_1) *i_1
+$$
+
+### Screenshot
+
+![Excel Screenshot](/excel-table.png)
 
 ## Part 2
 
