@@ -20,7 +20,7 @@ $
 - Therefore, using chain rule
 
 $$
-d(E_1)/dw_5 = dE_1/da\_o_1 * dao_1/do_1 * do_1/dw_5
+d(E_1)/dw_5 = dE_1/dao_1 * dao_1/do_1 * do_1/dw_5
 $$
 
 - And on simplifying we get,
